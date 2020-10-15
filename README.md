@@ -121,6 +121,7 @@ If request body was not сorrect, response returns status and error:
 
 ```
 ## Test API
+In command line using curl
 ### GET requests
 for example /get_data with hash `DqcH`
 ```
