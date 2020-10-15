@@ -1,6 +1,6 @@
 ## URL Shortener on Python Flask
 ### NavBar
-
+<a name="Run the app">Run the app</a> 
 0. [Run the app](#Run the app)
 1. [Use the app](#Use the app)
 2. [Use the API](#Use the API)
