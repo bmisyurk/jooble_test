@@ -1,14 +1,6 @@
 ## URL Shortener on Python Flask
-### NavBar
-<a name="Run the app">Run the app</a> 
-0. [Run the app](#Run the app)
-1. [Use the app](#Use the app)
-2. [Use the API](#Use the API)
-    1. [GET request](#GET request)
-    2. [POST requests](#POST requests)
-    3. [Error handler](#Error handler)
-3. [Test API](#Test API)
-###Run the app
+
+##Run the app
 
 ```
 $ git clone https://github.com/bmisyurk/jooble_test_python_dev
@@ -17,7 +9,7 @@ $ python -c "from app import db; db.drop_all(); db.create_all()"
 $ python app.py
 ```
 
- ###Use the app
+ ##Use the app
 http://127.0.0.1:5000
 
 Original URL - link which to shorten
@@ -25,7 +17,7 @@ Original URL - link which to shorten
 Lifetime - short link lifetime in days, and after these days not redirected on original url.
 
 
-###Use the API
+##Use the API
 ####GET request
 http://127.0.0.1:5000/get_data/<short_link>
 
