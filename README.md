@@ -1,5 +1,5 @@
 ## URL Shortener on Python Flask
-### NavBar
+## NavBar
 
 0. [Run the app](#Run-the-app)
 1. [Use the app](#Use-the-app)
@@ -8,7 +8,7 @@
     2. [POST requests](#POST-requests)
     3. [Error handler](#Error-handler)
 3. [Test API](#Test-API)
-### Run the app
+## Run the app
 
 ```
 $ git clone https://github.com/bmisyurk/jooble_test_python_dev
@@ -17,7 +17,7 @@ $ python -c "from app import db; db.drop_all(); db.create_all()"
 $ python app.py
 ```
 
- ### Use the app
+## Use the app
 http://127.0.0.1:5000
 
 Original URL - link which to shorten
@@ -25,8 +25,8 @@ Original URL - link which to shorten
 Lifetime - short link lifetime in days, and after these days not redirected on original url.
 
 
-### Use the API
-#### GET request
+## Use the API
+### GET request
 http://127.0.0.1:5000/get_data/<short_link>
 
 Get all data via short link, which has already been generated and stored in DataBase(DB). For e.g. GET: http://127.0.0.1:5000/get_data/DV5V. You should send only the **hash of url** itself, without the host address.
@@ -40,7 +40,7 @@ Response body:
   "short_link": "http://127.0.0.1:5000/1lRF"
 }
 ```
-#### POST requests
+### POST requests
 http://127.0.0.1:5000/add_link
 
 key `original_links` takes string data type as one link as two and more.
@@ -102,7 +102,7 @@ Response body:
   "original_link": "http://1234.com"
 }
 ```
-#### Error handler
+### Error handler
 If request body was not сorrect, response returns status and error:
 ```json
 {
@@ -117,5 +117,5 @@ If request body was not сorrect, response returns status and error:
 }
 
 ```
-### Test API
+## Test API
 
