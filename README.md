@@ -30,6 +30,7 @@ Lifetime - short link lifetime in days, and after these days not redirected on o
 http://127.0.0.1:5000/get_data/<short_link>
 
 Get all data via short link, which has already been generated and stored in DataBase(DB). For e.g. GET: http://127.0.0.1:5000/get_data/DV5V. You should send only the **hash of url** itself, without the host address.
+
 Response body:
 ```json
 {
@@ -86,6 +87,7 @@ Request body:
 
 
 key `lifetime` not required. If not exist - lifetime of link default 90 days.
+
 Request body:
 ```json
 {
@@ -119,7 +121,7 @@ If request body was not сorrect, response returns status and error:
 ```
 ## Test API
 ### GET requests
-for example get_data with hash `DqcH`
+for example /get_data with hash `DqcH`
 ```
 curl http://127.0.0.1:5000/get_data/DqcH
 ```
