@@ -12,6 +12,7 @@
 
 ```
 $ git clone https://github.com/bmisyurk/jooble_test_python_dev
+$ cd jooble_test_python_dev
 $ pip install -r requirements.txt
 $ python -c "from app import db; db.drop_all(); db.create_all()"
 $ python app.py
