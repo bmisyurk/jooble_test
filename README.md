@@ -10,7 +10,7 @@
     3. [Error handler](#Error-handler)
 4. [Test API](#Test-API)
 
-## App on hosting Heroku
+## App on hosting Heroku:
 https://sh0rtener-url.herokuapp.com/
 
 ## App on localhost:
