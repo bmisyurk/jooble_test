@@ -1,18 +1,20 @@
 ## URL Shortener on Python Flask
+## NavBar
+
+0. [App on hosting Heroku](#App-on-hosting-Heroku)
+1. [Run the app](#Run-the-app)
+2. [Use the app](#Use-the-app)
+3. [Use the API](#Use-the-API)
+    1. [GET request](#GET-request)
+    2. [POST requests](#POST-requests)
+    3. [Error handler](#Error-handler)
+4. [Test API](#Test-API)
 
 ## App on hosting Heroku
 https://sh0rtener-url.herokuapp.com/
 
-# Or testing app on localhost
-## NavBar
+## App on localhost:
 
-0. [Run the app](#Run-the-app)
-1. [Use the app](#Use-the-app)
-2. [Use the API](#Use-the-API)
-    1. [GET request](#GET-request)
-    2. [POST requests](#POST-requests)
-    3. [Error handler](#Error-handler)
-3. [Test API](#Test-API)
 ## Run the app
 
 ```
