@@ -118,4 +118,19 @@ If request body was not сorrect, response returns status and error:
 
 ```
 ## Test API
+### POST requests
+lifetime, default 90
+```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\"}" http://127.0.0.1:5000/add_link```
+with lifetime
+```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://jooble-docs.atlassian.net\", \"lifetime\":\"20\"}" http://127.0.0.1:5000/add_link```
+more links, , default 90
+```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com, https://trello.com, http://soska.jooble.com\"}" http://127.0.0.1:5000/add_link```
+more links with lifetime
+```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com, https://trello.com, http://soska.jooble.com\", \"lifetime\":\"60\"}" http://127.0.0.1:5000/add_link```
+
+call error handler
+```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"\"}" http://127.0.0.1:5000/add_link
+curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\", \"lifetime\":\"\"}" http://127.0.0.1:5000/add_link
+curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\", \"lifetime\":\"1000000\"}" http://127.0.0.1:5000/add_link
+curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\", \"lifetime\":\"100.02\"}" http://127.0.0.1:5000/add_link```
 
