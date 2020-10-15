@@ -119,8 +119,30 @@ If request body was not сorrect, response returns status and error:
 ```
 ## Test API
 ### GET requests
-for example get_data with hash `Kpvt`
-```curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\"}" http://127.0.0.1:5000/add_link```
+for example get_data with hash `DqcH`
+```
+curl http://127.0.0.1:5000/get_data/DqcH
+```
+Response body:
+```json
+{
+  "date_created": "Thu, 15 Oct 2020 11:35:01 GMT",
+  "date_expire": "Wed, 04 Nov 2020 15:18:10 GMT",
+  "lifetime": "20 days",
+  "original_link": "https://jooble-docs.atlassian.net",
+  "short_link": "http://127.0.0.1:5000/DqcH"
+}
+```
+If not found:
+```
+curl http://127.0.0.1:5000/get_data/blabla
+```
+Response body:
+```json
+{
+  "status": "Url not found or was expired"
+}
+```
 
 ### POST requests
 lifetime, default 90
@@ -148,23 +170,3 @@ curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"ht
 curl -i -H "Content-Type: application/json" -X POST -d "{\"original_links\":\"https://miro.com\", \"lifetime\":\"100.02\"}" http://127.0.0.1:5000/add_link
 ```
 
-```
-curl http://127.0.0.1:5000/get_data/DqcH
-```
-```json
-{
-  "date_created": "Thu, 15 Oct 2020 11:35:01 GMT",
-  "date_expire": "Wed, 04 Nov 2020 15:18:10 GMT",
-  "lifetime": "20 days",
-  "original_link": "https://jooble-docs.atlassian.net",
-  "short_link": "http://127.0.0.1:5000/DqcH"
-}
-```
-```
-curl http://127.0.0.1:5000/get_data/blabla
-```
-```json
-{
-  "status": "Url not found or was expired"
-}
-```
