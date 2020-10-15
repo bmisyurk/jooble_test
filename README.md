@@ -1,4 +1,9 @@
 ## URL Shortener on Python Flask
+
+## App on hosting Heroku
+https://sh0rtener-url.herokuapp.com/
+
+# Or testing app on localhost
 ## NavBar
 
 0. [Run the app](#Run-the-app)
